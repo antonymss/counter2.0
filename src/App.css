@@ -1,38 +1,159 @@
+/*.App {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    height: 100vh;*/
+/*}*/
+
+/*.wrapper {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    flex-direction: column;*/
+/*    min-width: 400px;*/
+/*    min-height: 350px;*/
+/*    background: #6075e2;*/
+/*    border: 1px solid red;*/
+/*    border-radius: 8px;*/
+/*}*/
+
+/*.buttons {*/
+/*    align-self: stretch;*/
+/*    display: flex;*/
+/*    justify-content: space-around;*/
+/*}*/
+
+/*button {*/
+/*    min-width: 150px;*/
+/*    padding: 12px 10px;*/
+/*    background: #caa521;*/
+/*    border: 1px solid mediumaquamarine;*/
+/*    outline: none;*/
+/*    border-radius: 8px;*/
+/*    font-size: 1.1rem;*/
+/*    cursor: pointer;*/
+/*    text-transform: uppercase;*/
+/*    transition: transform .3s ease;*/
+/*}*/
+
+/*.display {*/
+/*    min-width: 300px;*/
+/*    padding: 30px;*/
+/*    margin-bottom: 20px;*/
+/*    text-align: center;*/
+/*    background: mediumaquamarine;*/
+/*    border: 1px solid black;*/
+/*    border-radius: 8px;*/
+/*    font-size: 1.1rem;*/
+/*}*/
+
+/*.max {*/
+/*    color: red;*/
+/*}*/
+
+/*button:active {*/
+/*    transform: scale(.95);*/
+/*}*/
+
+/*button:disabled {*/
+/*    cursor: not-allowed;*/
+/*    background: darkgray;*/
+/*    opacity: .5;*/
+/*    border: 1px solid black;*/
+/*}*/
+
 .App {
-  text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    font-size: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    min-width: 400px;
+    min-height: 350px;
+    background: silver;
+    border: 1px solid aquamarine;
+    border-radius: 8px;
+}
+.container:not(:last-child) {
+    margin-right: 10px;
+}
+.display {
+    min-width: 300px;
+    max-width: 300px;
+    margin: 0 auto 20px;
+    padding: 30px;
+    text-align: center;
+    background: aqua;
+    border: 1px solid aquamarine;
+    border-radius: 8px;
+}
+.max {
+    color: red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buttons {
+    align-self: stretch;
+    display: flex;
+    justify-content: space-around;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button {
+    min-width: 150px;
+    padding: 12px 10px;
+    background: aqua;
+    border: 1px solid aquamarine;
+    outline: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform .3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:not(:last-child) {
+    margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:active {
+    transform: scale(.95);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background: gray;
+    opacity: .5;
+    border: 1px solid gray;
+}
+
+.setMode > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.setMode span {
+    min-width: 147px;
+}
+.setMode input[type="number"] {
+    margin-left: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.error {
+    color: red;
+}
+
+.error input {
+    outline: red;
+    border-color: red;
 }
